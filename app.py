@@ -66,7 +66,7 @@ def summarize(values: np.ndarray):
 # UI（ヘッダー）
 # -----------------
 st.title("📈 Cpk Calculator — 無料で工程能力指数を算出")
-st.caption("CSVアップロード or 値を直接入力 → Cpkを即時計算")
+st.caption("値を直接入力 or CSVアップロード → Cpkを即時計算")
 
 with st.expander("サンプルCSVをダウンロード"):
     sample = pd.DataFrame({"value": np.round(np.random.normal(loc=0.0, scale=0.1, size=150), 4)})
@@ -83,7 +83,7 @@ show_ads(height=180)
 # -----------------
 # 入力エリア
 # -----------------
-method = st.radio("入力方法を選択", ("CSVアップロード", "直接入力"), horizontal=True)
+method = st.radio("入力方法を選択", ("直接入力", "CSVアップロード"), horizontal=True)
 cols = st.columns(3)
 with cols[0]:
     lsl = st.number_input("LSL (下限) — 任意", value=np.nan, placeholder="例: -0.30", format="%f")
