@@ -13,6 +13,12 @@ st.set_page_config(
     layout="centered",
 )
 
+# --- Google Search Console 所有権確認用 metaタグ ---
+components.html(
+    "<meta name="google-site-verification" content="LKvYPIzaYLMZewOqUar_DsBcFhZS9p2C3vlbD4QEsEk" />",
+    height=0
+)
+
 # -----------------
 # AdSense ヘルパー
 # -----------------
